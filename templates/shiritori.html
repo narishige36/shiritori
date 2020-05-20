@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アイディアしりとり</title>
-  <script src="./css/stylesheet-reset.css"></script>
-</head>
+{% block content %}
+<main>
+  <div>しりとりしよう</div>
+  <div>残り時間</div>
 
-<body>
-  <header>
-    <img src="" alt="">
-    <div>アイディアしりとり</div>
-    <div>しりとりする</div>
-    <div>ログイン/新規登録</div>
-  </header>
-  <main>
-    <div>しりとりしよう</div>
-    <div>残り時間</div>
-    <input type="text" name="shiritori" id="">
-    <input type="submit" value="入力">
-  </main>
-  <footer>
-    <div>Copyright shiritori by SUNABACO TAKAMATSU</div>
-  </footer>
-</body>
-
-</html>
+  <input type="text" name="shiritori" id="">
+  <input type="submit" value="入力">
+</main>
+{% endblock %}

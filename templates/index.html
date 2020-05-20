@@ -1,31 +1,12 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>アイディアしりとり</title>
-  <script src="./css/stylesheet-reset.css"></script>
-</head>
-
-<body>
-  <header>
-    <img src="" alt="">
-    <h1>アイディアしりとり</h1>
-    <div>しりとりする</div>
-    <div>ログイン/新規登録</div>
-  </header>
-  <main>
-    <div>アイディアしりとりの手順</div>
-    <div>テーマ</div>
-    <form action="/" method="POST">
-      <input type="text" name="theme" id="">
-      <input type="submit" value="開始">
-    </form>
-  </main>
-  <footer>
-    <div>Copyright shiritori by SUNABACO TAKAMATSU</div>
-  </footer>
-</body>
-
-</html>
+{% block content %}
+<main>
+  <div>アイディアしりとりの手順</div>
+  <div>テーマ</div>
+  <form action="/" method="POST">
+    <input type="text" name="theme" id="">
+    <input type="submit" value="開始">
+  </form>
+</main>
+{% endblock %}
