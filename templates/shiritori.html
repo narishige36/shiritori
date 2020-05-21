@@ -4,8 +4,18 @@
 <main>
   <div>しりとりしよう</div>
   <div>残り時間</div>
+  <p>{{html_time}}</p>
+  <form action="/start">
+    <input type="submit" value="スタート">
+  </form>
 
-  <input type="text" name="shiritori" id="">
-  <input type="submit" value="入力">
+  <form action="/shiritori" method="POST">
+    <input type="text" name="words" id="">
+    <input type="submit" value="入力">
+    <p>{{error_text}}</p>
+  </form>
+  {% for word in word_list %}
+  <p>{{word["id"]}} : {{word["word"]}}</p>
+  {% endfor %}
 </main>
 {% endblock %}
